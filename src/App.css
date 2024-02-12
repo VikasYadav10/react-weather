@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+.box {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/public/background.jpg);
+  background-size: max(1500px, 100vw);
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  /* margin-top: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 22rem;
+  height: 30rem;
+  border: 0.1px solid black;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.loading {
+  position: absolute;
+  background-color: black;
+}
+.gif {
+  width: 300px;
+}
+.rotate {
+  width: 11.5rem;
+  height: 11.5rem;
+  animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.form input {
+  height: 2.5rem;
+  width: 15rem;
+  border: none;
+  border-radius: 50px;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+.temp {
+  font-size: 3rem;
+  color: white;
+}
+h3 {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0;
+  text-transform: capitalize;
+}
+.info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: whitesmoke;
+}
+.elements {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 1.5rem;
+}
+.wind,
+.water {
+  font-size: 1.7rem;
+  padding-right: 0.75rem;
+}
+.windinfo,
+.waterinfo {
+  font-size: 1rem;
+}
+.time {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  width: 350px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: whitesmoke;
+}
+.time div {
+  font-size: 2rem;
+}
+@media screen and (max-width: 790px) {
+  .container {
+    width: 12rem;
+  }
+  .form input {
+    height: 2.5rem;
+    width: 15rem;
+  }
+  .time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 350px;
+    display: flex;
+    color: whitesmoke;
+  }
+  .time div {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container {
+    width: 18rem;
+    height: 28rem;
+  }
+  .form input {
+    height: 2rem;
+    width: 13rem;
+  }
+  .wind,
+  .water {
+    font-size: 1rem;
+    padding-right: 0.75rem;
+  }
+  .windinfo,
+  .waterinfo {
+    font-size: 0.75rem;
+  }
+}
