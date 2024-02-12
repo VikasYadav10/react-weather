@@ -4,7 +4,7 @@ import Error from "./Error";
 import { FaWind } from "react-icons/fa6";
 import { FaWater } from "react-icons/fa6";
 
-//const key = "8e5be22a41c75105b6cf85c9179cabfd";
+const key ="";
 
 function WeatherInfo({ city }) {
   const [weather, setWeather] = useState(null);
