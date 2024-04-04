@@ -10,13 +10,18 @@ body {
 .box {
   height: 100vh;
   width: 100vw;
-  background-image: url(/public/background.jpg);
   background-size: max(1500px, 100vw);
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.day {
+  background-image: url(/public/bg.jpg);
+}
+.night {
+  background-image: url(/public/night.jpg);
 }
 .container {
   /* margin-top: 100px; */
@@ -27,9 +32,9 @@ body {
   margin: auto;
   width: 22rem;
   height: 30rem;
-  border: 0.1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.45);
   border-radius: 15px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.45);
 }
 .loading {
   position: absolute;
@@ -38,9 +43,15 @@ body {
 .gif {
   width: 300px;
 }
-.rotate {
+.sun {
   width: 11.5rem;
   height: 11.5rem;
+  animation: rotation 60s infinite linear;
+}
+.moon {
+  padding: 1rem;
+  width: 10rem;
+  height: 10rem;
   animation: rotation 60s infinite linear;
 }
 
@@ -64,6 +75,7 @@ body {
   border-radius: 50px;
   padding-left: 1rem;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 .temp {
   font-size: 3rem;
@@ -107,6 +119,9 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  color: #312f2f;
+}
+.night-time {
   color: whitesmoke;
 }
 .time div {
@@ -122,11 +137,10 @@ h3 {
   }
   .time {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -50px;
+    top: 80px;
     width: 350px;
     display: flex;
-    color: whitesmoke;
   }
   .time div {
     font-size: 1.5rem;
@@ -150,4 +164,8 @@ h3 {
   .waterinfo {
     font-size: 0.75rem;
   }
+}
+
+.error {
+  margin-top: 5rem;
 }
