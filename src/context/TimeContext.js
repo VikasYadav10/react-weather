@@ -11,8 +11,8 @@ function TimeProvider({ children }) {
   const day = addZero(today.getDate());
   const week = today.getDay();
   const hour = today.getHours();
-  // const evening = hour > 19 && hour < 7;
-  const evening = true;
+  const evening = hour > 19 && hour < 7;
+  
 
   const months = [
     "January",
