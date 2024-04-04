@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const WeatherContext = createContext();
-const KEY = "";
+//const KEY = "8e5be22a41c75105b6cf85c9179cabfd";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 function WeatherProvider({ children }) {
